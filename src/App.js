@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+
+import GoalList from './components/GoalList';
 import './App.css';
 
-function App() {
+const App = () => {
+  const goal = [
+    {id: 'cg2', text: 'get degree'},
+    {id: 'cg3', text: 'get job'},
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="course-goals">
+      <h2>Course Goals</h2>
+      <GoalList goals={goal} />
     </div>
   );
-}
+};
 
 export default App;
