@@ -5,7 +5,7 @@ import './NavLink.css'
 const NavLinks = () => {
     return <ul className="nav-links">
         <li>
-            <NavLink to="/report_homeless">Report Homeless</NavLink>
+            <NavLink to="/homeless">Homeless</NavLink>
         </li>
         <li>
             <NavLink to="/ngo">NGOs</NavLink>

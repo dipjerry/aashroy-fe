@@ -1,0 +1,19 @@
+.place-item {
+    width: 100%;
+}
+
+.place-item__content {
+    padding: 0;
+    width: 100%;
+}
+
+.map-container {
+    height: 15rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .place-item__image {
+        height: 20rem;
+    }
+}
