@@ -1,8 +1,8 @@
 import React from 'react';
-import UserList from '../components/UserList';
+import DonationList from '../components/DonationList';
 
-const Users = () => {
-  const USER = [
+const Donation = () => {
+  const DONATION = [
     {
       id: 'u1',
       name: 'Dipjyoti Kashyap',
@@ -29,8 +29,8 @@ const Users = () => {
     },
   ];
 
-  return <UserList items={USER}/>;
+  return <DonationList items={DONATION}/>;
 };
 
-export default Users
+export default Donation
 ;

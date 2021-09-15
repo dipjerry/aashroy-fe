@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import './HomelessItems.css';
 
 import Avatar from '../../shared/components/UIelements/Avatar';
+import Button from '../../shared/components/FormElements/Button';
 // import Cards from '../../shared/components/UIelements/Cards';
 const HomelessItems = (props) =>{
   return (
@@ -13,7 +14,9 @@ const HomelessItems = (props) =>{
       </td>
       <td className="Homeless-item__name">{props.name}</td>
       <td>{props.shelterAddress}</td>
-      <td><Link to={`/${props.id}/report`}><button>Locate</button></Link></td>
+      <td><Link to={`/${props.id}/report`}>
+        <Button>Locate on map</Button>
+      </Link></td>
     </tr>
 
   );

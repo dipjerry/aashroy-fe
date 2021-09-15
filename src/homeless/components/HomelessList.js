@@ -13,24 +13,12 @@ const HomelessList = (props) =>{
   }
 
   return (
-    // <ul className="Homeless-list">
-    //     {props.items.map(Homeless => (
-    //         <HomelessItems
-    //         key={Homeless.key}
-    //         id={Homeless.id}
-    //         image={Homeless.image}
-    //         name={Homeless.name}
-    //         shelterAddress={Homeless.shelterAddress}
-    //         shelterCoordinate={Homeless.shelterCoordinate}
-    //         />
-    //     ))}
-    // </ul>
     <table className="Homeless-table">
       <thead>
         <th>Image</th>
         <th>Name</th>
         <th>Address</th>
-        <th>map</th>
+        <th>Locate Shelter</th>
       </thead>
       <tbody>
         {props.items.map((Homeless) => (

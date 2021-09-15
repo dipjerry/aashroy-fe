@@ -5,25 +5,19 @@ const Ngo = () => {
   const NGO = [
     {
       id: 'u1',
-      name: 'Dipjyoti Kashyap',
+      name: 'Ngo1',
       image: 'https://picsum.photos/200',
       places: 3,
     },
     {
       id: 'u2',
-      name: 'Hema Gohain',
+      name: 'Ngo2',
       image: 'https://picsum.photos/200',
       places: 4,
     },
     {
       id: 'u3',
-      name: 'Jivan Jyoti',
-      image: 'https://picsum.photos/200',
-      places: 4,
-    },
-    {
-      id: 'u4',
-      name: 'Chirantan',
+      name: 'Ngo3',
       image: 'https://picsum.photos/200',
       places: 4,
     },

@@ -20,7 +20,7 @@ const Homelesss = () => {
   ];
 
   return <React.Fragment>
-    <h2>Homeless Person list</h2>
+    <h2>Homeless Person Near you</h2>
     <HomelessList items={Homeless}/></React.Fragment>;
 };
 

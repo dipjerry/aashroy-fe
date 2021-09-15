@@ -5,12 +5,12 @@ import Button from '../../shared/components/FormElements/Button';
 import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MINLENGTH,
-  VALIDATOR_FILE,
 } from '../../shared/util/validators';
 import {useForm} from '../../shared/hooks/form-hook';
-import './AddHomeless.css';
+import './AddDonation.css';
+import '../../vendor/css/CustomNav.css';
 import Modal from '../../shared/components/UIelements/Modal';
-const AddHomeless = () => {
+const AddDonation = () => {
   const [formState, inputHandler] = useForm(
       {
         name: {
@@ -49,7 +49,7 @@ const AddHomeless = () => {
       <Modal
         show={showForm}
         onCancel={closeFormHandler}
-        header="Report Homeless"
+        header="Add a Donation"
         contentClass="place-item__modal-content"
         footerClass="place-item__modal-actions"
         footer={<Button onClick={closeFormHandler}>CLOSE</Button>}
@@ -59,9 +59,17 @@ const AddHomeless = () => {
             id="name"
             element="input"
             type="text"
-            label="Name"
+            label="Donation Name"
             validators={[VALIDATOR_REQUIRE()]}
             errorText="Please enter a valid  name"
+            onInput={inputHandler}
+          />
+          <Input
+            id="regNo"
+            element="input"
+            label="Registration no"
+            validators={[VALIDATOR_REQUIRE()]}
+            errorText="Please enter a valid age."
             onInput={inputHandler}
           />
           <Input
@@ -70,8 +78,7 @@ const AddHomeless = () => {
             label="Description"
             validators={[VALIDATOR_MINLENGTH(5)]}
             errorText="Please enter a valid description
-            (at least 5 characters)."
-            onInput={inputHandler}
+            (at least 5 characters)." onInput={inputHandler}
           />
           <Input
             id="address"
@@ -81,32 +88,14 @@ const AddHomeless = () => {
             errorText="Please enter a valid address."
             onInput={inputHandler}
           />
-          <Input
-            id="age"
-            element="input"
-            label="Age"
-            type="integer"
-            validators={[VALIDATOR_REQUIRE()]}
-            errorText="Please enter a valid age."
-            onInput={inputHandler}
-          />
-          <Input
-            id="pic"
-            element="input"
-            label="Select a photo"
-            type="file"
-            validators={[VALIDATOR_FILE()]}
-            errorText="Please select a valid file"
-            onInput={inputHandler}
-          />
           <Button type="submit" disabled={!formState.isValid}>
         Add Person
           </Button>
         </form>
       </Modal>
-      <Button inverse onClick={openFormHandler}>Report a homeless</Button>
+      <Button inverse onClick={openFormHandler}>Register a Donation</Button>
     </React.Fragment>
   );
 };
 
-export default AddHomeless;
+export default AddDonation;

@@ -8,6 +8,7 @@ import {
 } from '../../shared/util/validators';
 import {useForm} from '../../shared/hooks/form-hook';
 import './AddNgo.css';
+import '../../vendor/css/CustomNav.css';
 import Modal from '../../shared/components/UIelements/Modal';
 const AddNgo = () => {
   const [formState, inputHandler] = useForm(
@@ -48,7 +49,7 @@ const AddNgo = () => {
       <Modal
         show={showForm}
         onCancel={closeFormHandler}
-        header="Add New Homeless"
+        header="Register a NGO"
         contentClass="place-item__modal-content"
         footerClass="place-item__modal-actions"
         footer={<Button onClick={closeFormHandler}>CLOSE</Button>}
@@ -58,9 +59,17 @@ const AddNgo = () => {
             id="name"
             element="input"
             type="text"
-            label="Name"
+            label="Ngo Name"
             validators={[VALIDATOR_REQUIRE()]}
             errorText="Please enter a valid  name"
+            onInput={inputHandler}
+          />
+          <Input
+            id="regNo"
+            element="input"
+            label="Registration no"
+            validators={[VALIDATOR_REQUIRE()]}
+            errorText="Please enter a valid age."
             onInput={inputHandler}
           />
           <Input
@@ -77,14 +86,6 @@ const AddNgo = () => {
             label="Address"
             validators={[VALIDATOR_REQUIRE()]}
             errorText="Please enter a valid address."
-            onInput={inputHandler}
-          />
-          <Input
-            id="age"
-            element="input"
-            label="Age"
-            validators={[VALIDATOR_REQUIRE()]}
-            errorText="Please enter a valid age."
             onInput={inputHandler}
           />
           <Button type="submit" disabled={!formState.isValid}>
